@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  box-sizing: border-box;
+  background-color: bisque;
+  color: rgba(255, 255, 255, 0.76);
+  overflow-y: auto;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: black;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.header img {
+    position: absolute;
+    right: 0;
+  width: 4rem;
+  height: 4.2rem;
+  margin-top: 2px;
+}
+.main {
+  height: 100%;
+  margin-top: 70px;
+  padding: 10px 50px;
+}
+#slider {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(33, 204, 190); */
+  background: #c0392b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #8e44ad,
+    #c0392b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #8e44ad,
+    #c0392b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin-top: 70px;
+  transform: translateX(-240px);
+  transition: transform 0.2s ease-in-out;
+}
+#checkbox:checked ~ #slider {
+  transform: translate(0);
+}
+#slider .menu {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  list-style: none;
+}
+li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.342);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.menu li a {
+  color: wheat;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  /* padding: 20px; */
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.togglebtn {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 20;
+  /* background-color: black; */
+  top: 30px;
+  /* right: 40px; */
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.line {
+  height: 100%;
+  height: 3px;
+  background-color: blanchedalmond;
+  transition: all 0.4s ease-in-out;
+}
+
+.line.middle,
+.line.bottom {
+  margin-top: 3px;
+}
+#checkbox:checked ~ .togglebtn > .line.middle {
+  opacity: 0;
+}
+
+#checkbox:checked ~ .togglebtn > .line.top {
+  margin-top: 8px;
+  transform: rotate(135deg);
+}
+
+#checkbox:checked ~ .togglebtn > .line.bottom {
+  margin-top: -8px;
+  transform: rotate(-135deg);
+}
+
+.bottom_container {
+  width: 100%;
+  height: 114px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  z-index: 22;
+}
+
+.music_box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    margin: auto;
+    margin-top: 3vw;
+    box-shadow: 1px 1px 13px 9px #bbb8b8;
+
+}
+#title{
+  margin-top: 10px;
+  font-family: 'PT Serif', serif;
+}
+#artist {
+  text-align: center;
+  /* margin-top: 10px; */
+  font-family: 'PT Serif', serif;
+}
+
+.btn button {
+  width: 100px;
+  height: 24px;
+  background: rgb(73, 219, 93);
+  border-radius: 15px;
+}
+.btn {
+
+  display: flex;
+  justify-content: center;
+  width: 95%;
+
+  padding: 16px;
+}
+
+.progressbar_container {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icons .button {
+  margin: 0 10px;
+}
+
+#previous:hover {
+  /* background-color: aqua; */
+  color: rgb(114, 235, 114);
+}
+
+#next:hover {
+  color: rgb(114, 235, 114);
+}
+#playing:hover {
+  color: rgb(221, 105, 126);
+}
+#progressbarbox {
+  position: relative;
+  height: 5px;
+  width: 70%;
+  background-color: white;
+  margin: auto;
+  border-radius: 4rem;
+  margin-bottom: 12px;
+  transition: all 0.5s ease-out;
+
+  cursor: pointer;
+}
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  border-radius: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s ease-in;
+  cursor: pointer;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  /* margin-left: 2.4rem; */
+  margin: auto;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.box1{
+    /* background-color: white; */
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+
+}
+.music_box img{
+    width: 100%;
+    height: 100%;
+}
+#playbtn{
+    width: 128px;
+    margin: auto;
+    height: 57px;
+    border-radius: 36px;
+}
+
+.box2{
+    height: auto;
+    width: 100%;
+}
+.container_box{
+    display: flex;
+    flex-direction: column;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+
+    /* display: grid; */
+    /* grid-template-rows: 40% auto; */
+    margin-top: 46px;
+    min-height: 70vh;
+    /* overflow-y: scroll; */
+}
+.songitem{
+    padding-left: 15px;
+    border-bottom:1px solid rgba(202, 199, 199, 0.411) ;
+}
+
+#title{
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+  }
+  h2{
+      color: white;
+      font-family: 'EB Garamond', serif;
+      text-transform: uppercase;
+  }
+  h3{
+      color: gray;
+      font-family: 'EB Garamond', serif;
+      text-transform: uppercase;
+
+  }
+.song{
+  display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 50px;
+    right: 33px;
+}

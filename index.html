@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="error.css">
+    <title>Spotify Clone</title>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="">
+    </div>
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="checkbox" class="togglebtn">
+        <div class="line top"></div>
+        <div class="line middle"></div>
+        <div class="line bottom"></div>
+        <!-- <div class="line bottom2"></div> -->
+
+    </label>
+   
+    <div id="slider">
+        <ul class="menu">
+            <li><a  href="">Home</a></li>
+            <li onclick="alert('Link is under work')"><a  href="#">About</a></li>
+            <li onclick="alert('Link is under work')"><a  href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="container_box">
+        <div class="box1">
+            <div class="music_box"><img id="picture" src="./cover/1.jpg" alt=""></div>
+            <h1 id="title">Let Me Love You</h1>
+            <h3 id="artist">Justin</h3>
+                <!-- <button>PlAY</button> -->
+                <!-- <button type="button" id="playbtn" class="btn btn-success">Success</button> -->
+        </div>
+        <div class="box2" id="itembox">
+            <!-- <div class="songitem">
+                <i id="0" class="far fa-1x fa-play-circle songitemplay button" ></i>
+                <h2 id="songname">Song name</h2>
+                <h3 id="singername">singer name</h3>
+            </div> -->
+
+              
+        </div>
+    </div>
+        <div class="bottom_container">
+            <audio src="./songs/Dekha Tenu Pehli Pehli Baar.mp3"></audio>
+            <!-- <div class="gif"><img src="pic.gif" alt=""></div>  -->
+            <div class="progressbar_container">
+            <div class="time">
+
+                <div id="startingtime">0:00</div>
+                <div id="duration">0:00</div>
+            </div>
+
+            <div id="progressbarbox">
+                <div id="progress"></div>
+            </div>
+
+            <div class="icons">
+                <i class="fa-solid far fa-2x fa-backward button" id="previous" title="previous"></i>
+                <i class="fa-solid far fa-2x fa-circle-play button" id="playing" title="Play"></i>
+                <i class="fa-solid far fa-2x fa-forward button" id="next" title="Next"></i>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<script src="https://kit.fontawesome.com/8749e3864a.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>
